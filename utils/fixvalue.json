@@ -1,0 +1,43 @@
+{
+  "Database" :
+  {
+    "strHost"     : "localhost",
+    "strUser"     : "root",
+    "strDatabase" : "eohub"
+  },
+  "Server" :
+  {
+    "Port"      : "41014",
+    "Koneksi"   : "http://",
+    "JWTSecret" : "aignatd04121974"
+  },
+  "Pesan" :
+  {
+    "strError"  		    : "Error",
+    "strKonekDBSukses"      : "Successfully connected to the database"
+  },
+  "Kode" :
+  {
+    "Sukses"      : 0,
+    "Gagal"       : -1,
+    "Empty"       : -2,
+    "NotSuccess"  : 201,
+    "Error"       : 202,
+    "OK"          : 200,
+    "TokenFailed" : 401
+  },
+  "RouterAPIV1" :
+  {
+    "users"     : "/api/v1/users",
+    "devices"   : "/api/v1/devices",
+    "customers" : "/api/v1/customers",
+    "formulirs" : "/api/v1/formulirs",
+    "history"   : "/api/v1/history",
+    "proses"    : "/api/v1/proses",
+    "device"    : "/api/v1/device"
+  },
+  "PhotoDir" :
+  {
+    "Pemasok"   : "./photo/pemasok/"
+  }
+}
