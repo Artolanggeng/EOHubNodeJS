@@ -27,6 +27,7 @@
     "stringbuilder": "0.0.11",
     "mysql2": "latest",
     "express-myconnection": "latest",
-    "mysql": "latest"
+    "mysql": "latest",
+    "rijndael-js": "latest"
   }
 }

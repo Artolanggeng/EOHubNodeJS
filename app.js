@@ -9,9 +9,11 @@ var bodyParser = require('body-parser');
 var argv = require('minimist')(process.argv.slice(2));
 
 var index = require('./routes/index');
-var user = require('./routes/user');
 
 // Add by Ignat
+var user    = require('./routes/user');
+var member  = require('./routes/member');
+
 var mysql = require('mysql2');
 var conn = require('express-myconnection');
 var FixValue = require('./utils/fixvalue.json');
@@ -35,14 +37,18 @@ app.use(conn(mysql,
   {
     host      : FixValue.Database.strHost,
     user      : FixValue.Database.strUser,
-    database  : FixValue.Database.strDatabase
+	  password  : FixValue.Database.strPassword,
+    database  : FixValue.Database.strDatabase,
+	  port      : FixValue.Database.strPort
   }, 'request'));
 
 // Connect to routes
 app.use('/', index);
 app.use('/users', user);
+app.use('/members', member);
 
 app.use(FixValue.RouterAPIV1.users, user);
+app.use(FixValue.RouterAPIV1.members, member);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

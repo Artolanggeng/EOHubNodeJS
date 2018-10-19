@@ -3,7 +3,9 @@
   {
     "strHost"     : "localhost",
     "strUser"     : "root",
-    "strDatabase" : "eohub"
+    "strPassword" : "hana13062009",
+    "strDatabase" : "eohub",
+    "strPort"     : "3306"
   },
   "Server" :
   {
@@ -11,15 +13,18 @@
     "Koneksi"   : "http://",
     "JWTSecret" : "aignatd04121974"
   },
-  "Pesan" :
+  "Msg" :
   {
-    "strError"  		    : "Error",
-    "strKonekDBSukses"      : "Successfully connected to the database"
+    "strError"  		          : "Error",
+    "strKonekDBSukses"        : "Successfully connected to the database",
+    "strSQLFailed"	          : "Database connection failed",
+    "RegistrationDataFailed"  : "Registration data failed",
+    "RegistrationDataSuccess" : "Registration data success"
   },
-  "Kode" :
+  "Code" :
   {
-    "Sukses"      : 0,
-    "Gagal"       : -1,
+    "Success"     : 0,
+    "Fail"        : -1,
     "Empty"       : -2,
     "NotSuccess"  : 201,
     "Error"       : 202,
@@ -30,11 +35,8 @@
   {
     "users"     : "/api/v1/users",
     "devices"   : "/api/v1/devices",
-    "customers" : "/api/v1/customers",
-    "formulirs" : "/api/v1/formulirs",
     "history"   : "/api/v1/history",
-    "proses"    : "/api/v1/proses",
-    "device"    : "/api/v1/device"
+    "members"    : "/api/v1/member"
   },
   "PhotoDir" :
   {

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var userctrl = require('./../controllers/userctrl');
+var memberctrl = require('./../controllers/memberctrl');
 
 /* GET users listing. */
 router.get('/', function(req, res)
@@ -8,10 +8,7 @@ router.get('/', function(req, res)
   res.send("Don't do that again !!!");
 });
 
-/* Get Test API */
-router.get('/test', userctrl.getTest);
-
-/* POST API Test */
-router.post('/token', userctrl.postToken);
+/* Get Registration Data */
+router.get('/data', memberctrl.getData);
 
 module.exports = router;
