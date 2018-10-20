@@ -2,10 +2,8 @@
  * Created by ignat on 03-Jan-17.
  */
 
-const Rijndael = require("rijndael-js");
 let MemberModel = require('./../models/membermodel');
 let Fungsi = require('../utils/AllFunction');
-let jwt = require("jsonwebtoken");
 let fixvalue = require('./../utils/fixvalue.json');
 
 let ctrlData = function(req, res)

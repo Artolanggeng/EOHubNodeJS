@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var userctrl = require('./../controllers/userctrl');
+var mediactrl = require('./../controllers/mediactrl');
 
 /* GET users listing. */
 router.get('/', function(req, res)
@@ -8,10 +8,7 @@ router.get('/', function(req, res)
   res.send("Don't do that again !!!");
 });
 
-/* Get Test API */
-router.get('/test', userctrl.getTest);
-
-/* POST API pengiriman token */
-router.post('/token', userctrl.postToken);
+/* GET API Pengambilan image product */
+router.get('/product', mediactrl.getProduct);
 
 module.exports = router;

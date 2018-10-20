@@ -21,12 +21,16 @@ module.exports =
 	},
 	RegistrationDataEmpty	:	function()
 	{
-		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Empty, "Msg"	:	strMsg.RegistrationDataFailed}};
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Empty, "Msg"	:	strMsg.RegistrationDataEmpty}};
 		return strJSON;
 	},
 	RegistrationDataSuccess	:	function(results)
 	{
 		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Success, "Msg"	:	strMsg.RegistrationDataSuccess}, "MembertypeRsp" : results};
 		return strJSON;
-	}
-};
+	},
+	ProductDataFailed	:	function()
+	{
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Fail, "Msg"	:	strMsg.ProductDataFailed}};
+		return strJSON;
+	}};

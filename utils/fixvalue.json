@@ -19,7 +19,11 @@
     "strKonekDBSukses"        : "Successfully connected to the database",
     "strSQLFailed"	          : "Database connection failed",
     "RegistrationDataFailed"  : "Registration data failed",
-    "RegistrationDataSuccess" : "Registration data success"
+    "RegistrationDataEmpty"   : "Registration data empty",
+    "RegistrationDataSuccess" : "Registration data success",
+    "ProductDataFailed"       : "Product data failed",
+    "ProductDataEmpty"        : "Product data empty",
+    "ProductDataSuccess"      : "Product data success"
   },
   "Code" :
   {
@@ -36,7 +40,8 @@
     "users"     : "/api/v1/users",
     "devices"   : "/api/v1/devices",
     "history"   : "/api/v1/history",
-    "members"    : "/api/v1/member"
+    "members"   : "/api/v1/member",
+    "media"     : "/api/v1/media"
   },
   "PhotoDir" :
   {
