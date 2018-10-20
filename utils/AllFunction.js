@@ -29,8 +29,24 @@ module.exports =
 		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Success, "Msg"	:	strMsg.RegistrationDataSuccess}, "MembertypeRsp" : results};
 		return strJSON;
 	},
-	ProductDataFailed	:	function()
+	ImageProductFailed	:	function()
 	{
-		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Fail, "Msg"	:	strMsg.ProductDataFailed}};
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Fail, "Msg"	:	strMsg.ImageProductFailed}};
 		return strJSON;
-	}};
+	},
+	AllProductFailed	:	function()
+	{
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Fail, "Msg"	:	strMsg.RegistrationDataFailed}};
+		return strJSON;
+	},
+	AllProductEmpty	:	function()
+	{
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Empty, "Msg"	:	strMsg.RegistrationDataEmpty}};
+		return strJSON;
+	},
+	AllProductSuccess	:	function(results)
+	{
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Success, "Msg"	:	strMsg.RegistrationDataSuccess}, "MembertypeRsp" : results};
+		return strJSON;
+	}
+};

@@ -8,7 +8,10 @@ router.get('/', function(req, res)
   res.send("Don't do that again !!!");
 });
 
+/* GET API Pengambilan seluruh data image product */
+router.get('/product', mediactrl.getAllProduct);
+
 /* GET API Pengambilan image product */
-router.get('/product', mediactrl.getProduct);
+router.get('/product', mediactrl.getImageProduct);
 
 module.exports = router;

@@ -6,9 +6,9 @@ let fixvalue = require('./../utils/fixvalue.json');
 
 let strQuery;
 
-module.exports.ProductData =
+module.exports.AllProductData =
 function (conn, callback)
 {
-	strQuery = 'SELECT UID, Name, Display, Description FROM members';
+	strQuery = 'SELECT UID, ImageURL, Name, Description FROM products';
 	conn.query(strQuery, callback);
 };

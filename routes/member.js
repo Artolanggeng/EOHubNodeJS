@@ -9,6 +9,6 @@ router.get('/', function(req, res)
 });
 
 /* Get Registration Data */
-router.get('/data', memberctrl.getData);
+router.get('/data', memberctrl.getMemberData);
 
 module.exports = router;

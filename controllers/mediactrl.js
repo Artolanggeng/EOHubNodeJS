@@ -6,15 +6,39 @@ let MediaModel = require('./../models/mediamodel');
 let Fungsi = require('../utils/AllFunction');
 let fixvalue = require('./../utils/fixvalue.json');
 
-let ctrlProduct = function(req, res)
+let ctrlImageProduct = function(req, res)
 {
 	var filesource = fixvalue.PhotoDir.SiswaBaru + req.params.Handphone + "/" + req.params.Photo;
 
 	res.download(filesource, req.params.Handphone, function (err)
 	{
 		if(err)
-			res.status(fixvalue.Code.Error).json(Fungsi.ProductDataFailed());
+			res.status(fixvalue.Code.Error).json(Fungsi.ImageProductFailed());
 	});
 };
 
-module.exports = {getProduct : ctrlProduct};
+let ctrlAllProduct = function(req, res)
+{
+	req.getConnection(function (err, conn)
+	{
+		if(err)
+			res.status(fixvalue.Code.Error).json(Fungsi.SQLFailed());
+		else
+		{
+			MediaModel.AllProductData(conn, function (err, results)
+			{
+				if(err)
+					res.status(fixvalue.Code.NotSuccess).json(Fungsi.AllProductFailed());
+				else
+				{
+					if(results.length > 0)
+						res.status(fixvalue.Code.OK).json(Fungsi.AllProductSuccess(results));
+					else
+						res.status(fixvalue.Code.NotSuccess).json(Fungsi.AllProductEmpty());
+				}
+			});
+		}
+	});
+};
+
+module.exports = {getImageProduct : ctrlImageProduct, getAllProduct : ctrlAllProduct};

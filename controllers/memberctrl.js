@@ -6,7 +6,7 @@ let MemberModel = require('./../models/membermodel');
 let Fungsi = require('../utils/AllFunction');
 let fixvalue = require('./../utils/fixvalue.json');
 
-let ctrlData = function(req, res)
+let ctrlMemberData = function(req, res)
 {
 	req.getConnection(function (err, conn)
 	{
@@ -30,4 +30,4 @@ let ctrlData = function(req, res)
 	});
 };
 
-module.exports = {getData : ctrlData};
+module.exports = {getMemberData : ctrlMemberData};

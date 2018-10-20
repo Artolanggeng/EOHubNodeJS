@@ -21,6 +21,7 @@
     "RegistrationDataFailed"  : "Registration data failed",
     "RegistrationDataEmpty"   : "Registration data empty",
     "RegistrationDataSuccess" : "Registration data success",
+    "ImageProductFailed"      : "Product data failed",
     "ProductDataFailed"       : "Product data failed",
     "ProductDataEmpty"        : "Product data empty",
     "ProductDataSuccess"      : "Product data success"
