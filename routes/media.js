@@ -9,9 +9,9 @@ router.get('/', function(req, res)
 });
 
 /* GET API Pengambilan seluruh data image product */
-router.get('/product', mediactrl.getAllProduct);
+router.get('/dataproduct', mediactrl.getAllProduct);
 
 /* GET API Pengambilan image product */
-router.get('/product', mediactrl.getImageProduct);
+router.get('/imageproduct/:Filename', mediactrl.getImageProduct);
 
 module.exports = router;

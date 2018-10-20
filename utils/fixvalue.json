@@ -10,7 +10,7 @@
   "Server" :
   {
     "Port"      : "41014",
-    "Koneksi"   : "http://",
+    "BaseURL"   : "http://localhost",
     "JWTSecret" : "aignatd04121974"
   },
   "Msg" :
@@ -44,8 +44,8 @@
     "members"   : "/api/v1/member",
     "media"     : "/api/v1/media"
   },
-  "PhotoDir" :
+  "ImageDir" :
   {
-    "Pemasok"   : "./photo/pemasok/"
+    "Product"   : "./images/product/"
   }
 }
