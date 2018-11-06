@@ -11,8 +11,11 @@ var argv = require('minimist')(process.argv.slice(2));
 var index = require('./routes/index');
 
 // Add by Ignat
-var user    = require('./routes/user');
+var user    = require('./routes/users');
 var member  = require('./routes/member');
+var media  = require('./routes/media');
+var product  = require('./routes/product');
+var brand  = require('./routes/brand');
 
 var mysql = require('mysql2');
 var conn = require('express-myconnection');
@@ -46,9 +49,15 @@ app.use(conn(mysql,
 app.use('/', index);
 app.use('/users', user);
 app.use('/members', member);
+app.use('/media', media);
+app.use('/products', product);
+app.use('/brands', brand);
 
 app.use(FixValue.RouterAPIV1.users, user);
 app.use(FixValue.RouterAPIV1.members, member);
+app.use(FixValue.RouterAPIV1.media, media);
+app.use(FixValue.RouterAPIV1.product, product);
+app.use(FixValue.RouterAPIV1.brand, brand);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

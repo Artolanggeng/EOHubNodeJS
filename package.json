@@ -22,6 +22,7 @@
     "multer": "^1.3.0",
     "mysql": "latest",
     "mysql2": "latest",
+    "nodeman": "^1.1.2",
     "npm": "^6.4.1",
     "php-date-formatter": "^1.3.4",
     "pm2": "^2.7.2",

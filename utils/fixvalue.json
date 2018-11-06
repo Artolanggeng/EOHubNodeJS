@@ -21,10 +21,14 @@
     "RegistrationDataFailed"  : "Registration data failed",
     "RegistrationDataEmpty"   : "Registration data empty",
     "RegistrationDataSuccess" : "Registration data success",
-    "ImageProductFailed"      : "Product data failed",
+    "ImageBrandFailed"        : "Brand image failed",
+    "ImageProductFailed"      : "Product image failed",
     "ProductDataFailed"       : "Product data failed",
     "ProductDataEmpty"        : "Product data empty",
-    "ProductDataSuccess"      : "Product data success"
+    "ProductDataSuccess"      : "Product data success",
+    "BrandDataFailed"         : "Brand data failed",
+    "BrandDataEmpty"          : "Brand data empty",
+    "BrandDataSuccess"        : "Brand data success"
   },
   "Code" :
   {
@@ -42,10 +46,13 @@
     "devices"   : "/api/v1/devices",
     "history"   : "/api/v1/history",
     "members"   : "/api/v1/member",
-    "media"     : "/api/v1/media"
+    "media"     : "/api/v1/media",
+    "brand"     : "/api/v1/brand",
+    "product"   : "/api/v1/product"
   },
   "ImageDir" :
   {
+    "Brand"     : "./images/brand/",
     "Product"   : "./images/product/"
   }
 }

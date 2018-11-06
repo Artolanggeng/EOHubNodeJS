@@ -8,8 +8,8 @@ router.get('/', function(req, res)
   res.send("Don't do that again !!!");
 });
 
-/* GET API Pengambilan seluruh data image product */
-router.get('/dataproduct', mediactrl.getAllProduct);
+/* GET API Pengambilan image brand */
+router.get('/imagebrand/:Filename', mediactrl.getImageBrand);
 
 /* GET API Pengambilan image product */
 router.get('/imageproduct/:Filename', mediactrl.getImageProduct);

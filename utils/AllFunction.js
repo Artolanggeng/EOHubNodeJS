@@ -29,6 +29,11 @@ module.exports =
 		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Success, "Msg"	:	strMsg.RegistrationDataSuccess}, "MembertypeRsp" : results};
 		return strJSON;
 	},
+	ImageBrandFailed	:	function()
+	{
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Fail, "Msg"	:	strMsg.ImageBrandFailed}};
+		return strJSON;
+	},
 	ImageProductFailed	:	function()
 	{
 		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Fail, "Msg"	:	strMsg.ImageProductFailed}};
@@ -47,6 +52,23 @@ module.exports =
 	AllProductSuccess	:	function(results)
 	{
 		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Success, "Msg"	:	strMsg.ProductDataSuccess}, "ProductDataRsp" : results};
+//		console.log(JSON.stringify(results).replace(/\\/g, ''));
+//		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Success, "Msg"	:	strMsg.ProductDataSuccess}, "ProductDataRsp" : JSON.stringify(results).replace(/\\/g, "")};
+		return strJSON;
+	},
+	AllBrandFailed	:	function()
+	{
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Fail, "Msg"	:	strMsg.BrandDataFailed}};
+		return strJSON;
+	},
+	AllBrandEmpty	:	function()
+	{
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Empty, "Msg"	:	strMsg.BrandDataEmpty}};
+		return strJSON;
+	},
+	AllBrandSuccess	:	function(results)
+	{
+		strJSON =	{"CoreRsp" : {"Code"	:	strRspID.Success, "Msg"	:	strMsg.BrandDataSuccess}, "BrandDataRsp" : results};
 		return strJSON;
 	}
 };
